@@ -10,7 +10,7 @@ const displayDIceRoll = (img, diceVal) => {
 }
 
 const getWinner = (roll1, roll2) => {
-    if (roll1 == roll2) {
+    if (roll1 === roll2) {
         return "DRAW"
     }
     return (roll1 > roll2) ? 1 : 2;
@@ -20,7 +20,7 @@ const displayWinner = () => {
     const draw = "DRAW"
     const winner = getWinner(randomNumber1, randomNumber2);
     const winnerText = document.querySelector("h1");
-    (winner == draw) ? winnerText.innerText=draw : winnerText.innerText=`WINNER: PLAYER ${winner}`
+    (winner === draw) ? winnerText.innerText=draw : winnerText.innerText=`WINNER: PLAYER ${winner}`
 }
 
 document.addEventListener('DOMContentLoaded', () => {
